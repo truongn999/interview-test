@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './issuer.css'
 import Question from '../../components/Question/Question';
-import { Link } from 'react-router-dom';
 import { NotificationManager } from 'react-notifications';
 
 const Issuer = () => {
@@ -147,7 +146,9 @@ const Issuer = () => {
   }, [])
 
   const handleExamCreation = (e) => {
-    if (!questionName || !timeLimit || !questionCount) return false
+    if (!questionName || !timeLimit || !questionCount) {
+      NotificationManager.warning('Vui lòng chọn đủ thông tin', 'Thông báo');
+    }
     else {
       // Tại đây có if esle giữa random và tự chọn
       if (questionType === 'random') {
@@ -315,7 +316,7 @@ const Issuer = () => {
               Đề thi đã được khởi tạo:
             </div>
             <div>Truy cập vào đường dẫn 
-              <a style={{color: 'red'}} href={`http://localhost:3000/test/${codeTest}`} target='_blacnk'> {`http://localhost:3000/test/${codeTest}`} </a>
+              <a style={{color: 'red'}} href={`${window.location.origin}/test/${codeTest}`} target='_blacnk'> {`${window.location.origin}/test/${codeTest}`} </a>
                để bắt đầu thi</div>
           </>
         )
