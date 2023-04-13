@@ -210,6 +210,7 @@ const Question = () => {
                 key={index}
                 question={question}
                 index={index}
+                isShowResult={false}
               />
             ))}
           </div>

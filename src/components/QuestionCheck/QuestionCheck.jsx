@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './questionCheck.css'
 
-const QuestionCheck = ({ question, index }) => {
+const QuestionCheck = ({ question, index, isShowResult = true }) => {
 
   const [answers, setAnswers] = useState({})
   // const [selectQ, setSelectQ] = useState({})
@@ -30,7 +30,7 @@ const QuestionCheck = ({ question, index }) => {
                 checked={question.answer_user === option}
                 onChange={(e) => handleAnswerChange(e, question.id)}
               />
-              <label className={question.answer === option ? 'text-success' : ''}>{ option }</label>
+              <label className={isShowResult && question.answer === option ? 'text-success' : ''}>{ option }</label>
             </div>
           ))
         }

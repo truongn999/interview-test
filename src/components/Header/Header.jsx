@@ -11,9 +11,11 @@ const Header = ({title = null}) => {
   }, [window.location.href])
   return (
     <header>
-      <div className='logo'>
-        <img src="/logo192.png" alt="Logo app" />
-      </div>
+      <Link to='/'>
+        <div className='logo'>
+          <img src="/logo192.png" alt="Logo app" />
+        </div>
+      </Link>
       {
         !isMenu && (
           <ul className='menu'>
