@@ -1,0 +1,15 @@
+.question {
+
+}
+
+.question__title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.question__radio {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+}

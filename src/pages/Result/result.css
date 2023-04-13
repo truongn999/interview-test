@@ -1,0 +1,10 @@
+section.result__page {
+    max-width: fit-content;
+}
+
+.result__page table th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    min-width: 150px;
+}

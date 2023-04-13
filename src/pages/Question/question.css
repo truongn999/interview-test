@@ -1,0 +1,23 @@
+.field {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.field__title {
+    font-size: 18px;
+    width: 150px;
+    min-width: 150px;
+    font-weight: 500;
+}
+
+.field__input {
+    width: 80%;
+    margin-bottom: 8px;
+}
+
+.field__radio {
+    display: flex;
+    gap: 4px;
+}

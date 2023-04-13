@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+section {
+  max-width: 800px;
+  margin: 32px auto;
+  border: 8px;
+  background: #f9f9f9;
+  padding: 16px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  text-align: center;
+  padding: 8px 16px;
+  background: #459ab2;
+  border: #61dafb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn:active {
+  scale: 1.05;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-success {
+  color: darkgreen;
+}
+
+.text-error {
+  color: darkred;
+}
+
+h2, h3, h4 {
+  line-height: 1.2;
+  /* margin:; */
+}

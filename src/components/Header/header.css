@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+header img {
+    width: 64px;
+}
+
+header .menu {
+    display: flex;
+    gap: 24px;
+}
+
+header .menu a {
+    font-size: 24px;
+}
+
+header .menu a:hover {
+    color: dimgrey;
+}
