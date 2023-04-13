@@ -205,9 +205,14 @@ const Issuer = () => {
   }
   
   const generateQuiz = (questions, numQuestions) => {
-    const count = localStorage.getItem('countLimit') || 4 // Lấy ra số lần để so sánh câu hỏi đó là cũ hay mới, ít nhất lấy ra 3 lần (< 4), countLimit có thể được tạo trong setting(tính năng tương lai)
+    let count = localStorage.getItem('countLimit') || 4 // Lấy ra số lần để so sánh câu hỏi đó là cũ hay mới, ít nhất lấy ra 3 lần (< 4), countLimit có thể được tạo trong setting(tính năng tương lai)
+
     const shuffledQuestions = [...questions].sort((a, b) => {
-      if (a.selected_count < count && b.selected_count >= count) {
+      const aTimestamp = new Date(a.timestamp).getTime();
+      const bTimestamp = new Date(b.timestamp).getTime();
+      if (a.selected_count === b.selected_count) {
+        return aTimestamp - bTimestamp;
+      } else if (a.selected_count < count && b.selected_count >= count) {
         return -1;
       } else if (a.selected_count >= count && b.selected_count < count) {
         return 1;
